@@ -1,0 +1,4 @@
+!dist/.keep
+dist/
+node_modules/
+docs/

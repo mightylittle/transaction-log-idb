@@ -1,0 +1,47 @@
+{
+  "name": "@mightylittle/transaction-log-idb",
+  "type": "module",
+  "version": "0.1.0",
+  "description": "Replayable logs using IndexedDB.",
+  "homepage": "https://github.com/mightylittle/transaction-log-idb",
+  "source": "src/index.ts",
+  "exports": {
+    "types": "./dist/transaction-log-idb.d.ts",
+    "require": "./dist/transaction-log-idb.cjs",
+    "default": "./dist/transaction-log-idb.modern.js"
+  },
+  "main": "./dist/transaction-log-idb.cjs",
+  "module": "./dist/transaction-log-idb.module.js",
+  "unpkg": "./dist/transaction-log-idb.umd.js",
+  "types": "dist/transaction-log-idb.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "clean": "rm -rf dist/",
+    "build": "npm run clean && microbundle",
+    "start": "npm run clean && microbundle watch",
+    "test": "npm run build && npm run http",
+    "http": "http-server -a localhost -p 8000 -c-1 -o",
+    "typedoc": "typedoc src/index.ts"
+  },
+  "author": "John Newton",
+  "license": "Apache-2.0",
+  "private": false,
+  "devDependencies": {
+    "@mightylittle/transaction-log": "^0.1.0",
+    "@types/chai": "^4.3.5",
+    "@types/mocha": "^10.0.1",
+    "@types/sinon": "^10.0.14",
+    "chai": "^4.3.7",
+    "http-server": "^14.1.1",
+    "idb": "^7.1.1",
+    "microbundle": "^0.15.1",
+    "mocha": "^10.2.0",
+    "sinon": "^15.0.4",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0",
+    "typedoc": "^0.26.4",
+    "typescript": "^4.9.4"
+  }
+}
