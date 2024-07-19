@@ -1,19 +1,19 @@
 {
   "name": "@mightylittle/transaction-log-idb",
   "type": "module",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Replayable logs using IndexedDB.",
   "homepage": "https://github.com/mightylittle/transaction-log-idb",
   "source": "src/index.ts",
   "exports": {
-    "types": "./dist/transaction-log-idb.d.ts",
+    "types": "./dist/index.d.ts",
     "require": "./dist/transaction-log-idb.cjs",
     "default": "./dist/transaction-log-idb.modern.js"
   },
   "main": "./dist/transaction-log-idb.cjs",
   "module": "./dist/transaction-log-idb.module.js",
   "unpkg": "./dist/transaction-log-idb.umd.js",
-  "types": "dist/transaction-log-idb.d.ts",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist/"
   ],
@@ -29,7 +29,7 @@
   "license": "Apache-2.0",
   "private": false,
   "devDependencies": {
-    "@mightylittle/transaction-log": "^0.1.0",
+    "@mightylittle/transaction-log": "^0.3.0",
     "@types/chai": "^4.3.5",
     "@types/mocha": "^10.0.1",
     "@types/sinon": "^10.0.14",
