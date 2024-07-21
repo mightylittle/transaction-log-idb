@@ -23,7 +23,7 @@ async function start () {
   await log.append("bar");
   await log.countTransactions(); // => 2
   await log.replay((data) => console.log("data", data));
-  await console.log("transactions", await log.getSeqRangeTransactions(1, 2)); // returns the first and second entries
+  console.log("transactions", await log.getSeqRangeTransactions(1, 2)); // returns the first and second entries
   await log.close();
   await log.clear();
 }
@@ -45,8 +45,8 @@ async function start () {
   await log.countTransactions(); // => 2
   await log.countCommits(); // => 1
   await log.replay((data) => console.log("data", data), true);
-  await console.log("transactions", await log.getSeqRangeTransactions(1, 2)); // prints the first and second entries
-  await console.log("commits", await log.getSeqRangeCommits(1)); // prints the first and any later commits
+  console.log("transactions", await log.getSeqRangeTransactions(1, 2)); // prints the first and second entries
+  console.log("commits", await log.getSeqRangeCommits(1)); // prints the first and any later commits
   await log.close();
   await log.clear();
 }
